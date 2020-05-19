@@ -4,14 +4,14 @@ to get started npm install
 that installs all required modules
 this uses GTTS module to convert text to speech with these easy lines of code
 
-const express = require('express');
-const bodyParser= require('body-parser');
-const gtts = require('gtts.js').gTTS
-const app=express();
-app.use(bodyParser.urlencoded({extended:true}));
-
-app.set('view engine','ejs');  
-app.use(express.static("public"));  
+const express = require('express');   
+const bodyParser= require('body-parser');   
+const gtts = require('gtts.js').gTTS   
+const app=express();   
+app.use(bodyParser.urlencoded({extended:true}));   
+   
+app.set('view engine','ejs');    
+app.use(express.static("public"));   
 app.get("/",function(req,res){  
   res.render('index')  
 });  
