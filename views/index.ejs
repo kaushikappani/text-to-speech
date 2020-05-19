@@ -1,0 +1,120 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.6">
+    <title>Text To speech</title>
+
+
+
+    <!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Favicons -->
+<meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      html,
+body {
+  height: 100%;
+}
+
+body {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-image: url('img/wave.gif');
+   background-size: cover;
+   height: 100vh;
+   padding:0;
+   margin:0;
+   background-color: white;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}input, textarea{
+  margin-bottom: 10px;
+}#loading{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #fff
+  url('https://media.giphy.com/media/xTk9ZvMnbIiIew7IpW/giphy.gif')
+   no-repeat center center;
+  z-index: 99999;
+}
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="signin.css" rel="stylesheet">
+  </head>
+  <body class="text-center" onload="myFunction()">
+      <div id="loading"></div>
+  <form class="form-signin" method="post" action="/">
+  <h1 class="h3 mb-3 font-weight-normal" style="color:white;"><i class="far fa-file-audio"></i> Text To Speech</h1>
+  <label class="sr-only">Text</label>
+  <input class="form-control" type="text" name="name" value="" placeholder="Title" required autocomplete="off" autofocus>
+  <textarea class="form-control" name="text" rows="8" cols="80" placeholder="Input" required autocomplete="off"></textarea>
+  <button class="btn btn-lg btn-primary btn-block" type="submit"><i class="fas fa-download"></i> Download as mp3</button>
+  <p class="mt-5 mb-3 text-muted">&copy; Kaushik Appani</p>
+</form>
+<script type="text/javascript">
+var preloader = document.getElementById("loading");
+// window.addEventListener('load', function(){
+// 	preloader.style.display = 'none';
+// 	})
+
+function myFunction(){
+  preloader.style.display = 'none';
+};
+</script>
+</body>
+</html>
